@@ -1,0 +1,11 @@
+:root {
+  --color-primario:     #003366;   /* Azul oscuro SOLCA */
+  --color-primario-hover: #004080;
+  --color-fondo:        #FFFFFF;   /* Blanco */
+  --color-texto:        #2C2C2C;
+  --color-fila-alterna: #F5F7FA;
+  --color-completo:     #27AE60;   /* Verde — fila completa */
+  --color-borde:        #D0D7DE;
+  --color-error:        #C0392B;
+  --color-guardado:     #2ECC71;   /* Indicador auto-save */
+}

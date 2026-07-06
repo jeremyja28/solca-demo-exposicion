@@ -1,0 +1,44 @@
+{
+  "pacientes": [
+    {
+      "AgendamientoId": 1001,
+      "MedicoId": 10,
+      "Hora": "08:00",
+      "N_HC": "0102030405",
+      "Apellidos": "PÉREZ DÍAZ",
+      "Nombres": "JUAN CARLOS",
+      "FechaNacimiento": "1980-05-15",
+      "Edad": 46,
+      "Sexo": "Masculino",
+      "CIE10": "C50.9",
+      "Diagnostico": "TUMOR MALIGNO DE LA MAMA, PARTE NO ESPECIFICADA",
+      "Procedencia": "CUENCA",
+      "Convenio": "IESS",
+      "NombreDoctor": "DR. PRUEBA ONCOLOGO",
+      "EspecialidadDoctor": "Oncología Médica",
+      "AreaConsultorio": "CONSULTORIO 1",
+      "FechaHoraCita": "2026-07-05T08:00:00",
+      "FechaAtencion": "2026-07-05"
+    },
+    {
+      "AgendamientoId": 1002,
+      "MedicoId": 10,
+      "Hora": "08:30",
+      "N_HC": "0908070605",
+      "Apellidos": "GÓMEZ RUIZ",
+      "Nombres": "MARÍA FERNANDA",
+      "FechaNacimiento": "1975-10-20",
+      "Edad": 50,
+      "Sexo": "Femenino",
+      "CIE10": "C53.9",
+      "Diagnostico": "TUMOR MALIGNO DEL CUELLO DEL UTERO, SIN OTRA ESPECIFICACION",
+      "Procedencia": "AZOGUES",
+      "Convenio": "MSP",
+      "NombreDoctor": "DR. PRUEBA ONCOLOGO",
+      "EspecialidadDoctor": "Oncología Médica",
+      "AreaConsultorio": "CONSULTORIO 1",
+      "FechaHoraCita": "2026-07-05T08:30:00",
+      "FechaAtencion": "2026-07-05"
+    }
+  ]
+}
