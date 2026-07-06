@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
-import { setupAxiosInterceptors } from '../services/api';
+import { setupAxiosInterceptors, apiClient } from '../services/api';
 
 export const AuthContext = createContext();
 
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
         formData.append('password', password);
 
         try {
-            const res = await axios.post('http://localhost:8000/auth/login', formData, {
+            const res = await apiClient.post('/auth/login', formData, {
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             });
             const access_token = res.data.access_token;
