@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { HeartPulse, KeyRound, User, AlertCircle, ArrowRight } from 'lucide-react';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/logo2.png';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
