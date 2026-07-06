@@ -41,17 +41,16 @@ def get_current_user(token: str = Depends(oauth2_scheme)):
         raise credentials_exception
 
 @router.post("/login")
-def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = db.query(Usuario).filter(Usuario.Username == form_data.username, Usuario.Activo == True).first()
-    
-    if not user or not verify_password(form_data.password, user.PasswordHash):
+def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    # FORZADO PARA MODO DEMO - Sin conexión a Base de Datos
+    if form_data.username == "dr.prueba" and form_data.password == "demo123":
+        access_token = create_access_token(
+            data={"sub": "1", "rol": "doctor", "medico_id": 10}
+        )
+        return {"access_token": access_token, "token_type": "bearer"}
+    else:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
+            detail="Credenciales de demo incorrectas. Intenta con dr.prueba / demo123",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    
-    access_token = create_access_token(
-        data={"sub": str(user.Id), "rol": user.Rol, "medico_id": user.MedicoId}
-    )
-    return {"access_token": access_token, "token_type": "bearer"}

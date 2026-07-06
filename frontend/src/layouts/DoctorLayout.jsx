@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { HeartPulse, LogOut, UserCircle } from 'lucide-react';
+import Logo from '../assets/Logo.png';
 
 const DoctorLayout = ({ children }) => {
     const { usuario, logout } = useContext(AuthContext);
@@ -17,9 +18,7 @@ const DoctorLayout = ({ children }) => {
             {/* Header premium */}
             <header className="sticky top-0 z-50 flex h-16 items-center justify-between bg-gradient-to-r from-solca-azul to-blue-900 px-6 shadow-md border-b border-blue-800/50">
                 <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 shadow-inner backdrop-blur-md border border-white/20">
-                        <HeartPulse className="h-6 w-6 text-cyan-400 drop-shadow-sm" />
-                    </div>
+                    <img src={Logo} alt="Logo SOLCA" className="h-10 w-auto object-contain drop-shadow-sm" />
                     <div className="flex flex-col">
                         <span className="text-lg font-bold text-white tracking-wide leading-none">SOLCA</span>
                         <span className="text-xs font-medium text-cyan-200/80 leading-none mt-1">Parte Diario Médico</span>

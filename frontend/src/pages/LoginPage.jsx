@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { HeartPulse, KeyRound, User, AlertCircle, ArrowRight } from 'lucide-react';
+import Logo from '../assets/Logo.png';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
@@ -49,8 +50,8 @@ const LoginPage = () => {
                 <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-8 sm:p-10 transition-all duration-300 hover:shadow-blue-900/50">
                     
                     <div className="text-center mb-10">
-                        <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/10 border border-white/20 mb-6 shadow-inner">
-                            <HeartPulse className="w-10 h-10 text-cyan-300 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                        <div className="flex justify-center mb-6">
+                            <img src={Logo} alt="Logo SOLCA" className="h-24 w-auto object-contain drop-shadow-lg" />
                         </div>
                         <h1 className="text-3xl font-extrabold text-white tracking-tight mb-2">SOLCA</h1>
                         <p className="text-blue-200 font-medium tracking-wide text-sm uppercase">Sistema de Parte Diario Médico</p>

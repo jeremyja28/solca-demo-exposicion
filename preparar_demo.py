@@ -7,12 +7,17 @@ def crear_proyecto_demo():
     origen = Path(__file__).parent.resolve()
     destino = origen / "PROYECTO_DEMO_LIMPIO"
 
-    # Si ya existe, lo eliminamos para tener un estado limpio
+    # Si ya existe, eliminamos su contenido EXCEPTO .git
     if destino.exists():
         print(f"Limpiando directorio destino existente: {destino}")
-        shutil.rmtree(destino)
-        
-    destino.mkdir(parents=True, exist_ok=True)
+        for item in destino.iterdir():
+            if item.name != '.git':
+                if item.is_dir():
+                    shutil.rmtree(item)
+                else:
+                    item.unlink()
+    else:
+        destino.mkdir(parents=True, exist_ok=True)
 
     # Definir qué ignorar
     carpetas_ignoradas = {
