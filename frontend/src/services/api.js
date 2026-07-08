@@ -19,21 +19,21 @@ export const setupAxiosInterceptors = (token) => {
 };
 
 export const exportarConcentradoExcel = (medicoId, mes, anio) => {
-    return apiClient.get(`/api/exportacion/excel/${medicoId}`, {
+    return apiClient.get(`/exportar/excel/${medicoId}`, {
         params: { mes, anio },
         responseType: 'blob'
     });
 };
 
 export const exportarDiarioExcel = (medicoId, fecha) => {
-    return apiClient.get(`/api/exportacion/diario/excel/${medicoId}`, {
+    return apiClient.get(`/exportar/diario/excel/${medicoId}`, {
         params: { fecha },
         responseType: 'blob'
     });
 };
 
 export const exportarDiarioPDF = (medicoId, fecha) => {
-    return apiClient.get(`/api/exportacion/diario/pdf/${medicoId}`, {
+    return apiClient.get(`/exportar/diario/pdf/${medicoId}`, {
         params: { fecha },
         responseType: 'blob'
     });
