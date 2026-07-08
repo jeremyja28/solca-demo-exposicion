@@ -11,8 +11,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["*"] genera error en FastAPI si allow_credentials=True
-    allow_origin_regex=".*", 
+    allow_origins=["http://localhost:5173", "AQUÍ_PEGA_TU_LINK_DE_VERCEL"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

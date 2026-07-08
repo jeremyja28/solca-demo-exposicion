@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Utiliza la variable de entorno o un fallback local si no existe
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// SOLUCIÓN NUCLEAR: URL base hardcodeada para evitar fallos de Vercel/Variables
+const API_URL = 'https://solca-demo-exposicion.onrender.com';
 
 export const apiClient = axios.create({
     baseURL: API_URL,
